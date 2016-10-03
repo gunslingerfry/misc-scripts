@@ -1,0 +1,1 @@
+lpass ls | awk 'match ($0, /\/(.*)\s\[/, a) { if (a[1] in b) print $0, "is a duplicate of", b[a[1]]; b[a[1]]=$0; }'
